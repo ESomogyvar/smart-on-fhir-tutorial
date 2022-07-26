@@ -42,7 +42,7 @@
             lname = patient.name[0].family;
           }
           
-           console.log('Em ' + JSON.stringify(allergy[0]));
+           console.log('Em ' + JSON.stringify(allergy[0].text));
           //console.log(patient.name[0].family);
           //console.log(fname);
           //console.log('temp' + JSON.stringify(byCodes('8310-5')));
