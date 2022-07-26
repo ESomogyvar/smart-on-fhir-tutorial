@@ -51,7 +51,7 @@
           
           console.log(JSON.stringify(byCodes(temp)));
           var myTemp = getQuantityValueAndUnit(temp);
-          console.log('Emese '+'myTemp' );
+          console.log('Emese '+ myTemp );
                      
 
           var p = defaultPatient();
