@@ -22,6 +22,12 @@
                       }
                     }
                   });
+        
+        var allergy  = smart.patient.api.fetchAll({
+                    type: 'AllergyIntolerance',
+                  });
+        
+        console.log('Em ' + JSON.stringify(allergy));
 
         $.when(pt, obv).fail(onError);
 
@@ -71,9 +77,8 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           p.tmp = getQuantityValueAndUnit(temp[0]);
-          
-          console.log('Em ' + p.tmp)
-
+         
+         
           ret.resolve(p);
         });
       } else {
