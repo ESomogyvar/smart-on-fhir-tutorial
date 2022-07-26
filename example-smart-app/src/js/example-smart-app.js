@@ -42,11 +42,11 @@
             lname = patient.name[0].family;
           }
           
-           console.log('Em ' + JSON.stringify(allergy[0].type.code));
+           console.log('Em ' + JSON.stringify(allergy[0]));
           //console.log(patient.name[0].family);
           //console.log(fname);
           //console.log('temp' + JSON.stringify(byCodes('8310-5')));
-                    
+   
           
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('85354-9'),'8480-6');
@@ -58,6 +58,10 @@
           //console.log(JSON.stringify(byCodes(temp)));
           //var myTemp = getQuantityValueAndUnit(temp);
           //console.log('Emese '+ getQuantityValueAndUnit(temp[0]));
+            
+            for (let i = 0; i < allergy.length; i++) {
+              console.log(" in loop " + allergy[i])
+             }
                      
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -135,6 +139,8 @@
   }
   
   function getAllergyIntolerance(a) {
+    var allergies = [];
+    a.forEach(function(observation){
     
   }
 
