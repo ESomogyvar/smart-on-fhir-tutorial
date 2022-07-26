@@ -50,8 +50,8 @@
           var temp = getQuantityValueAndUnit(byCodes('8310-5'));
           
           console.log(JSON.stringify(byCodes(temp)));
-          var temp = getQuantityValueAndUnit(temp[0]);
-          console.log('Emese '+'temp' );
+          var myTemp = getQuantityValueAndUnit(temp);
+          console.log('Emese '+'myTemp' );
                      
 
           var p = defaultPatient();
