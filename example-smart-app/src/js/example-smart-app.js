@@ -39,7 +39,7 @@
 
           console.log(patient.name[0].family);
           console.log(fname);
-          console.log('temp' + JSON.stringfy(byCodes('8310-5')));
+          console.log('temp' + JSON.stringify(byCodes('8310-5')));
           
           
           var height = byCodes('8302-2');
