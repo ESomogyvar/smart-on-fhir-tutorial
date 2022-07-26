@@ -138,11 +138,6 @@
     }  
   }
   
-  function getAllergyIntolerance(a) {
-    var allergies = [];
-    a.forEach(function(observation){
-    
-  }
 
   window.drawVisualization = function(p) {
     $('#holder').show();
