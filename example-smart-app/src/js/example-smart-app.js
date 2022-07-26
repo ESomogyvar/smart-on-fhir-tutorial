@@ -37,8 +37,8 @@
             lname = patient.name[0].family;
           }
 
-          console.log(patient.name[0].family);
-          console.log(fname);
+          //console.log(patient.name[0].family);
+          //console.log(fname);
           //console.log('temp' + JSON.stringify(byCodes('8310-5')));
                     
           
@@ -52,9 +52,7 @@
           //console.log(JSON.stringify(byCodes(temp)));
           //var myTemp = getQuantityValueAndUnit(temp);
           //console.log('Emese '+ getQuantityValueAndUnit(temp[0]));
-          console.log('Em ' + temp)
                      
-
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
@@ -73,6 +71,8 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           p.tmp = getQuantityValueAndUnit(temp[0]);
+          
+          console.log('Em ' + p.tmp)
 
           ret.resolve(p);
         });
