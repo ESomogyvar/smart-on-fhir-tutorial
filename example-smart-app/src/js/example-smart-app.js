@@ -131,7 +131,11 @@
           return ob.valueQuantity.value + ' ' + ob.valueQuantity.unit;
     } else {
       return undefined;
-    }
+    }  
+  }
+  
+  function getAllergyIntolerance(a) {
+    
   }
 
   window.drawVisualization = function(p) {
