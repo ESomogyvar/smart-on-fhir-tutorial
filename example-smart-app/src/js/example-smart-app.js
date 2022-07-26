@@ -47,11 +47,11 @@
           var diastolicbp = getBloodPressureValue(byCodes('85354-9'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-          var temp = getQuantityValueAndUnit(byCodes('8310-5'));
+          var temp = byCodes('8310-5');
           
-          console.log(JSON.stringify(byCodes(temp)));
-          var myTemp = getQuantityValueAndUnit(temp);
-          console.log('Emese '+ myTemp );
+          //console.log(JSON.stringify(byCodes(temp)));
+          //var myTemp = getQuantityValueAndUnit(temp);
+          console.log('Emese '+ getQuantityValueAndUnit(temp[0]));
                      
 
           var p = defaultPatient();
