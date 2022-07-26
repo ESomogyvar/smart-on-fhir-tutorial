@@ -17,7 +17,8 @@
                       code: {
                         $or: ['http://loinc.org|8302-2',
                               'http://loinc.org|85354-9', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1']
+                              'http://loinc.org|2089-1',
+                              'http://loinc.org|8310-5']
                       }
                     }
                   });
@@ -38,6 +39,7 @@
 
           console.log(patient.name[0].family);
           console.log(fname);
+          console.log('temp' + byCodes('8310-5');
           
           //var lname = patient.name.family;
           var height = byCodes('8302-2');
