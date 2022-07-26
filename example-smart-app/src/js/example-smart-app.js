@@ -39,9 +39,9 @@
 
           console.log(patient.name[0].family);
           console.log(fname);
-          console.log('temp' + byCodes('8310-5'));
+          console.log('temp' + JSON.stringfy(byCodes('8310-5')));
           
-          //var lname = patient.name.family;
+          
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('85354-9'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('85354-9'),'8462-4');
