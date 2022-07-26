@@ -51,7 +51,7 @@
           
           //console.log(JSON.stringify(byCodes(temp)));
           //var myTemp = getQuantityValueAndUnit(temp);
-          console.log('Emese '+ getQuantityValueAndUnit(temp[0]));
+          //console.log('Emese '+ getQuantityValueAndUnit(temp[0]));
                      
 
           var p = defaultPatient();
@@ -71,6 +71,7 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
+          p.tmp = getQuantityValueAndUnit(temp[0])
 
           ret.resolve(p);
         });
@@ -95,6 +96,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      tmp: {value: ''},
     };
   }
 
