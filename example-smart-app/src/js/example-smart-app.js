@@ -27,11 +27,10 @@
                     type: 'AllergyIntolerance',
                   });
         
-        console.log('Em ' + JSON.stringify(allergy));
+       
+        $.when(pt, obv, allergy).fail(onError);
 
-        $.when(pt, obv).fail(onError);
-
-        $.when(pt, obv).done(function(patient, obv) {
+        $.when(pt, obv, allergy).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
@@ -42,7 +41,8 @@
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family;
           }
-
+          
+           console.log('Em ' + JSON.stringify(allergy));
           //console.log(patient.name[0].family);
           //console.log(fname);
           //console.log('temp' + JSON.stringify(byCodes('8310-5')));
