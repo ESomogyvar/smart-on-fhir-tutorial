@@ -56,7 +56,7 @@
             lname = patient.name[0].family;
           }
           
-           //console.log('Em ' + JSON.stringify(allergy[0]));
+          //console.log('Em ' + JSON.stringify(allergy[0]));
           //console.log(patient.name[0].family);
           //console.log(fname);
           //console.log('temp' + JSON.stringify(byCodes('8310-5')));
@@ -91,6 +91,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           p.tmp = getQuantityValueAndUnit(temp[0]);
+          p.allrgy = myList;
          
          
           ret.resolve(p);
@@ -117,6 +118,7 @@
       ldl: {value: ''},
       hdl: {value: ''},
       tmp: {value: ''},
+      allrgy: {value: ''},
     };
   }
 
@@ -162,6 +164,7 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#tmp').html(p.tmp);
+    $('#myList').html(p.allrgy);
   };
 
 })(window);
