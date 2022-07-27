@@ -72,10 +72,6 @@
           //console.log(JSON.stringify(byCodes(temp)));
           //var myTemp = getQuantityValueAndUnit(temp);
           //console.log('Emese '+ getQuantityValueAndUnit(temp[0]));
-            
-            for (let i = 0; i < allergy.length; i++) {
-              console.log(" in loop " + allergy[i])
-             }
                      
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
