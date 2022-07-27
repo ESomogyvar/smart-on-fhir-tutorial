@@ -23,26 +23,40 @@
                     }
                   });
         
-        var allergy  = smart.patient.api.fetchAll({
+        var allrgyToll  = smart.patient.api.fetchAll({
                     type: 'AllergyIntolerance',
                   });
         
        
-        $.when(pt, obv, allergy).fail(onError);
+        $.when(pt, obv, allrgyToll).fail(onError);
 
-        $.when(pt, obv, allergy).done(function(patient, obv, allergy) {
+        $.when(pt, obv, allrgyToll).done(function(patient, obv, allrgyToll) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
           var fname = '';
           var lname = '';
+          
+          for (let i = 0; i < allrgyToll.length; i++) { // get the  subsection of the  json object that contains the  allergies 
+             var  j = allrgyToll[i].code
+             //   console.log(JSON.stringify(allrgyToll[i]))
+             if (typeof(j.coding[0]) != "undefined")
+             {
+              var k = j.coding[0]
+              console.log( k.display);
+              const node = document.createElement("li");
+              node.innerHTML = k.display;
+              document.getElementById("myList").appendChild(node);
+             }                
+          }
+
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family;
           }
           
-           console.log('Em ' + JSON.stringify(allergy[0]));
+           //console.log('Em ' + JSON.stringify(allergy[0]));
           //console.log(patient.name[0].family);
           //console.log(fname);
           //console.log('temp' + JSON.stringify(byCodes('8310-5')));
